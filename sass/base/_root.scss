@@ -1,0 +1,16 @@
+@use "../abstracts/index" as *;
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --tertiary: #{$tertiary};
+  --background: #{$background};
+  --white: #{$white};
+  --black: #{$black};
+  --location-background: #{$location-background};
+  --btn-box: #{$btn-box};
+  --fa-icons: #{$fa-icons};
+  --operating__btn-hover: #{$operating__btn-hover};
+  --footer-background: #{$footer-background};
+  --heart-like: #{$heart-like};
+}

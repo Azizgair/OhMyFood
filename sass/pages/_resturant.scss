@@ -1,0 +1,105 @@
+@use "../abstracts" as *;
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .main-img {
+        position: relative;
+        width: 100%;
+    }
+}
+
+.page {
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    padding: 2% 5% 5% 5%;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__heading {
+        position: relative;
+        text-transform: uppercase;
+    }
+}
+
+.order-card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    background-color: $background;
+    border-radius: 15px;
+    cursor: pointer;
+
+
+    &__info {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        width: 100%;
+        margin: 2%;
+        gap: 2%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        padding: 5px;
+
+        & h4 {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & p {
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+        width: 15%;
+        padding: 5px;
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    &__checkout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 20%;
+        margin-right: -20%;
+        border-radius: 0px 15px 15px 0px;
+        background-color: $background;
+    }
+}

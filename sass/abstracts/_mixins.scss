@@ -1,0 +1,51 @@
+@use "variables" as *;
+/* @mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid-center() {
+  display: grid;
+  place-items: center;
+}
+ */
+
+@mixin font-roboto {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin button-style {
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: $white;
+  border-radius: 5rem;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  box-shadow: 0rem 0.2rem 0.5rem 0.1rem $btn-box;
+  background: linear-gradient(-10deg, $primary 25%, $secondary 100%);
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 80ms ease-in;
+    filter: brightness(1.05);
+    box-shadow: $btn-box 0.5rem 0.5rem 0.5rem 0.1rem;
+  }
+}
+
+/* @mixin heart-styles {
+  font-size: 1.3rem;
+  width: 1.375rem;
+  height: 1.3125rem;
+  display: flex;
+  margin-right: 2.06rem;
+} */

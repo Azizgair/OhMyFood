@@ -1,0 +1,167 @@
+@use "../abstracts" as *;
+
+.main {
+    padding: 1rem;
+}
+
+.location {
+    background-color: var(--location-background);
+    display: flex;
+    height: 3.125rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.0625rem;
+    flex-shrink: 0;
+
+    &__icon {
+        width: 0.75rem;
+        height: 1rem;
+        flex-shrink: 0;
+    }
+
+    &__text {
+        @include font-roboto;
+    }
+}
+
+
+.reserve {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    h2 {
+        width: 17.1875rem;
+        height: 4.25rem;
+        margin: 1rem 3rem;
+        color: var(--black);
+        text-align: center;
+        @include font-roboto;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    p {
+        display: block;
+        margin-left: 1em;
+        margin-right: 1em;
+        color: var(--fa-icons);
+    }
+
+    .explore__btn button {
+        @include button-style;
+    }
+}
+
+.operating {
+    padding: 2rem;
+    background-color: var(--White);
+
+    &__btns {
+        counter-reset: steps;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        background-color: var(--background);
+        border-radius: 1.5rem;
+        flex-grow: 1;
+        padding: 1.5rem 0;
+        width: 100%;
+        box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
+
+        &:hover {
+            background-color: var(--operating__btn-hover);
+        }
+
+        i {
+            padding: 0 1rem;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.restaurants {
+    background-color: var(--background);
+    padding: 1rem;
+    margin: 1.5rem 0 4rem 0;
+
+    .restaurant__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.125rem;
+
+        .restaurant__card {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+            background-color: var(--White);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
+
+            img {
+                width: 100%;
+                height: 10rem;
+                object-fit: cover;
+                width: 21.625rem;
+                height: 14.4375rem;
+            }
+
+            .restaurant__info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .restaurant__discription {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 0.75rem;
+                    margin-left: 0.81rem;
+                    color: var(--black);
+
+                    h2 {
+                        margin-top: 1rem;
+                        margin-bottom: 0.2rem;
+                    }
+                }
+
+                .heart {
+                    font-size: 1.3rem;
+                    width: 1.375rem;
+                    height: 1.3125rem;
+                    display: flex;
+                    margin-right: 2.06rem;
+
+                    input[type="checkbox"] {
+                        display: none;
+                    }
+
+                    input[type="checkbox"]:not(:checked)+.fas.fa-heart {
+                        display: none;
+                    }
+
+                    input[type="checkbox"]:checked+.far.fa-heart {
+                        display: none;
+                    }
+
+                    input[type="checkbox"]:checked+.fas.fa-heart {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
