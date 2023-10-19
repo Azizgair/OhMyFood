@@ -282,7 +282,7 @@ footer .logo {
   overflow: hidden;
   box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
 }
-.restaurants .restaurant__cards .restaurant__card p {
+.restaurants .restaurant__cards .restaurant__card .new_rest {
   display: flex;
   width: 5rem;
   height: 1.8125rem;
