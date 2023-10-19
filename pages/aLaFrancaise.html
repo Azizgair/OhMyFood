@@ -35,11 +35,19 @@
         <section class="page ">
             <div class="page__heading reserve__heading">
                 <h2>À la française</h2>
-                <button type="submit" class="heart-btn"><i class="far fa-heart"></i></button>
+                <label class="heart">
+                    <input type="checkbox" id="heart-checkbox">
+                    <i class="fa-heart far"></i>
+                    <i class="fa-heart fas"></i>
+                </label>
+
             </div>
             <div class="page__order-container">
                 <div class="order-list fade-in">
-                    <h3 class=" order-list__heading">Entrées</h3>
+                    <div>
+                        <h3 class=" order-list__heading">Entrées</h3>
+                        <div class="order-list__line"></div>
+                    </div>
                     <div class="order-card">
                         <div class="order-card__info">
                             <div class="order-card__description">
@@ -81,7 +89,10 @@
                     </div>
                 </div>
                 <div class="order-list fade-in--1delay">
-                    <h3 class="order-list__heading">Plats</h3>
+                    <div>
+                        <h3 class="order-list__heading">Plats</h3>
+                        <div class="order-list__line"></div>
+                    </div>
                     <div class="order-card">
                         <div class="order-card__info">
                             <div class="order-card__description">
@@ -123,7 +134,10 @@
                     </div>
                 </div>
                 <div class="order-list  fade-in--2delay">
-                    <h3 class=" order-list__heading">Desserts</h3>
+                    <div>
+                        <h3 class=" order-list__heading">Desserts</h3>
+                        <div class="order-list__line"></div>
+                    </div>
                     <div class="order-card">
                         <div class="order-card__info">
                             <div class="order-card__description">

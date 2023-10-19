@@ -1,13 +1,16 @@
 @use "../abstracts" as *;
 
+header {
+
+    width: 100%;
+}
+
 .header {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
-    width: 23.4375rem;
+    width: 100%;
     height: 3.9375rem;
-    padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
-    justify-content: center;
     align-items: center;
     flex-shrink: 0;
     background-color: var(--white);
@@ -15,15 +18,17 @@
 
     &__logo {
         display: flex;
-        width: 2.3125rem;
+        width: 12.3125rem;
         height: 2.25rem;
         padding: 0rem 1.1875rem 0rem 1rem;
         justify-content: center;
         flex-shrink: 0;
-
+        padding: 0.875rem 5.5625rem 0.8125rem 3.5625rem;
     }
 
     &__homearrow {
         display: flex;
+        color: $footer-background;
+        margin-left: 1.06rem;
     }
 }

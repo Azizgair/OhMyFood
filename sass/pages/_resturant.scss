@@ -7,21 +7,74 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
 
     .main-img {
         position: relative;
         width: 100%;
+
     }
+
 }
 
 .page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
     border-radius: 2.5rem 2.5rem 0rem 0rem;
-    padding: 2% 5% 5% 5%;
+    gap: 2.5rem;
+    width: 100%;
+
+    &__order-container {
+        width: 100%;
+    }
 
     &__heading {
         display: flex;
         align-items: center;
-        margin: auto;
+        width: 100%;
+        justify-content: space-between;
+
+        .heart input[type=checkbox] {
+            display: none;
+
+        }
+
+        .heart {
+            font-size: 1.3rem;
+            width: 21px;
+            height: 20px;
+            display: flex;
+            margin-right: 20px;
+
+            .fa-heart {
+                color: $heart-like;
+            }
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            input[type="checkbox"]:not(:checked)~.fas.fa-heart {
+                display: none;
+            }
+
+            input[type="checkbox"]:checked~.far.fa-heart {
+                display: none;
+            }
+
+            input[type="checkbox"]:checked~.fas.fa-heart {
+                display: block;
+            }
+        }
+
+    }
+
+
+    i {
+        text-decoration: none;
     }
 }
 
@@ -29,10 +82,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
 
     &__heading {
         position: relative;
         text-transform: uppercase;
+
+    }
+
+    &__line {
+        width: 2.5rem;
+        height: 0.1875rem;
+        background: #99E2D0;
+
     }
 }
 
@@ -42,10 +105,13 @@
     justify-content: space-between;
     width: 100%;
     padding: 0;
-    background-color: $background;
+    background-color: $white;
     border-radius: 15px;
-    cursor: pointer;
-
+    box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
+    gap: 0.3125rem;
+    height: 4.5rem;
+    align-items: center;
+    width: 100%;
 
     &__info {
         display: flex;
