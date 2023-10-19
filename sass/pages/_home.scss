@@ -115,6 +115,15 @@
             overflow: hidden;
             box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
 
+            .new_rest {
+                display: flex;
+                width: 5rem;
+                height: 1.8125rem;
+                flex-shrink: 0;
+                border-radius: 0.125rem;
+                background-color: #99E2D0;
+            }
+
             img {
                 width: 100%;
                 height: 10rem;
