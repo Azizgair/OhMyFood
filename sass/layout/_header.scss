@@ -18,17 +18,17 @@ header {
 
     &__logo {
         display: flex;
-        width: 12.3125rem;
+        width: 100%;
         height: 2.25rem;
-        padding: 0rem 1.1875rem 0rem 1rem;
         justify-content: center;
         flex-shrink: 0;
-        padding: 0.875rem 5.5625rem 0.8125rem 3.5625rem;
+        position: relative;
     }
 
     &__homearrow {
         display: flex;
         color: $footer-background;
         margin-left: 1.06rem;
+        position: absolute;
     }
 }
