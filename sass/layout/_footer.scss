@@ -1,27 +1,45 @@
 @use "../abstracts" as *;
 
 footer {
+    @media (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 0px;
+    }
+
+
+
     background-color: var(--footer-background);
     color: var(--white);
     font-family: Roboto;
     display: flex;
-    width: 100%;
     padding: 1.375rem 1.5625rem;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
     width: 100%;
 
     ul {
+        @media (min-width: 768px) {
+            display: flex;
+        }
+
         padding: 0;
         list-style: none;
 
         li {
+            @media (min-width: 768px) {
+                width: 186px;
+
+            }
+
             padding: 0.2rem;
 
             a,
             i {
                 color: var(--white);
+
             }
         }
     }
@@ -31,6 +49,10 @@ footer {
     }
 
     .logo {
+        @media (min-width: 768px) {
+            order: 5;
+        }
+
         font-size: 1.2rem;
     }
 }

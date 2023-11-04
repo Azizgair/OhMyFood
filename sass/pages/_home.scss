@@ -30,10 +30,16 @@
     align-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 
+    @media (min-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1.875rem;
+    }
 
     h2 {
-        width: 17.1875rem;
         height: 4.25rem;
         margin: 1rem 3rem;
         color: var(--black);
@@ -53,25 +59,44 @@
     }
 
     .explore__btn button {
+        @media (min-width: 768px) {
+            margin: 0rem 0rem 1.5rem 0rem;
+        }
+
         @include button-style;
     }
 }
 
 .operating {
-    padding: 2rem;
-    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 100%;
-    justify-content: center;
-    padding-left: 1em;
-    /*  padding:1em; */
+    padding: 3.125rem 2rem;
+    gap: 1.5625rem;
+    align-self: stretch;
+    background-color: var(--white);
+
+    @media (min-width: 992px) {
+        padding: 3.125rem 6.25rem;
+    }
 
     &__btns {
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
         counter-reset: steps;
         display: flex;
         gap: 2rem;
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+
 
     &__btn {
         display: flex;
@@ -83,8 +108,18 @@
         width: 100%;
         box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
 
-        &:hover {
-            background-color: var(--operating__btn-hover);
+        p {
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: -12px;
+            background-color: var(--primary);
+            color: var(--white);
+            width: 25px;
+            height: 25px;
+            text-align: center;
         }
 
         i {
@@ -96,16 +131,44 @@
 
 .restaurants {
     background-color: var(--background);
-    padding: 1rem;
-    margin: 1.5rem 0 4rem 0;
+    padding: 0px;
+    margin: 1.5rem 0rem 4rem 0rem;
+    width: 100%;
 
-    .restaurant__cards {
+    @media (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px;
+        gap: 1.75rem;
+        align-self: stretch;
+    }
+
+    @media (min-width: 992px) {
+        padding: 0rem 6.25rem;
+    }
+
+    .restaurant__cards {
+        @media (min-width: 768px) {
+            gap: 1.75rem;
+            justify-content: space-around;
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
         gap: 1.125rem;
 
         .restaurant__card {
+            @media (min-width: 768px) {
+                width: 45%;
+                padding: 0.5rem;
+            }
+
             display: flex;
             flex-direction: column;
             position: relative;
@@ -116,16 +179,18 @@
             box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
 
             .new_rest {
+                position: absolute;
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 80px;
                 height: 29px;
-                flex-shrink: 0;
+                top: 15px;
+                right: 15px;
+                z-index: 2;
                 border-radius: 0.125rem;
                 box-shadow: 0px 2px 4px 0px var(--header-shadow);
                 background-color: var(--tertiary);
-                position: absolute;
-                bottom: 0px;
-
             }
 
             img {

@@ -24,8 +24,8 @@
 body {
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 0 auto;
+  padding: 0px;
+  margin: 0px auto;
   background-color: var(--background);
   flex-wrap: wrap;
   font-family: "Roboto";
@@ -129,19 +129,36 @@ footer {
   color: var(--white);
   font-family: Roboto;
   display: flex;
-  width: 100%;
   padding: 1.375rem 1.5625rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
   width: 100%;
+}
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0px;
+  }
 }
 footer ul {
   padding: 0;
   list-style: none;
 }
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+  }
+}
 footer ul li {
   padding: 0.2rem;
+}
+@media (min-width: 768px) {
+  footer ul li {
+    width: 186px;
+  }
 }
 footer ul li a,
 footer ul li i {
@@ -152,6 +169,11 @@ footer i {
 }
 footer .logo {
   font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  footer .logo {
+    order: 5;
+  }
 }
 
 .location {
@@ -185,9 +207,17 @@ footer .logo {
   align-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .reserve {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.875rem;
+  }
 }
 .reserve h2 {
-  width: 17.1875rem;
   height: 4.25rem;
   margin: 1rem 3rem;
   color: var(--black);
@@ -223,6 +253,11 @@ footer .logo {
   background: linear-gradient(-10deg, #9356DC 25%, #FF79DA 100%);
   text-align: center;
 }
+@media (min-width: 768px) {
+  .reserve .explore__btn button {
+    margin: 0rem 0rem 1.5rem 0rem;
+  }
+}
 .reserve .explore__btn button:hover {
   transform: scale(1.05);
   transition: all 80ms ease-in;
@@ -231,12 +266,21 @@ footer .logo {
 }
 
 .operating {
-  padding: 2rem;
-  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
-  justify-content: center;
-  padding-left: 1em;
-  /*  padding:1em; */
+  padding: 3.125rem 2rem;
+  gap: 1.5625rem;
+  align-self: stretch;
+  background-color: var(--white);
+}
+@media (min-width: 992px) {
+  .operating {
+    padding: 3.125rem 6.25rem;
+  }
 }
 .operating__btns {
   counter-reset: steps;
@@ -244,6 +288,12 @@ footer .logo {
   gap: 2rem;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .operating__btns {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
 }
 .operating__btn {
   display: flex;
@@ -255,8 +305,18 @@ footer .logo {
   width: 100%;
   box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
 }
-.operating__btn:hover {
-  background-color: var(--operating__btn-hover);
+.operating__btn p {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -12px;
+  background-color: var(--primary);
+  color: var(--white);
+  width: 25px;
+  height: 25px;
+  text-align: center;
 }
 .operating__btn i {
   padding: 0 1rem;
@@ -265,14 +325,40 @@ footer .logo {
 
 .restaurants {
   background-color: var(--background);
-  padding: 1rem;
-  margin: 1.5rem 0 4rem 0;
+  padding: 0px;
+  margin: 1.5rem 0rem 4rem 0rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    gap: 1.75rem;
+    align-self: stretch;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants {
+    padding: 0rem 6.25rem;
+  }
 }
 .restaurants .restaurant__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1.125rem;
+}
+@media (min-width: 768px) {
+  .restaurants .restaurant__cards {
+    gap: 1.75rem;
+    justify-content: space-around;
+  }
 }
 .restaurants .restaurant__cards .restaurant__card {
   display: flex;
@@ -284,16 +370,25 @@ footer .logo {
   overflow: hidden;
   box-shadow: 0rem 0.2rem 0.5rem 0.1rem var(--btn-box);
 }
+@media (min-width: 768px) {
+  .restaurants .restaurant__cards .restaurant__card {
+    width: 45%;
+    padding: 0.5rem;
+  }
+}
 .restaurants .restaurant__cards .restaurant__card .new_rest {
+  position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 29px;
-  flex-shrink: 0;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
   border-radius: 0.125rem;
   box-shadow: 0px 2px 4px 0px var(--header-shadow);
   background-color: var(--tertiary);
-  position: absolute;
-  bottom: 0px;
 }
 .restaurants .restaurant__cards .restaurant__card img {
   width: 100%;
@@ -353,6 +448,8 @@ footer .logo {
 .main .main-img {
   position: relative;
   width: 100%;
+  max-height: 250px;
+  object-fit: cover;
 }
 
 .page {
@@ -364,15 +461,39 @@ footer .logo {
   border-radius: 2.5rem 2.5rem 0rem 0rem;
   gap: 2.5rem;
   width: 100%;
+  position: relative;
+  top: -50px;
+  background-color: #F6F6F6;
+}
+@media (min-width: 768px) {
+  .page {
+    width: 68%;
+    background: #F6F6F6;
+    gap: 0px;
+  }
 }
 .page__order-container {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .page__order-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .page__heading {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .page__heading {
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+  }
 }
 .page__heading .heart input[type=checkbox] {
   display: none;
@@ -381,7 +502,6 @@ footer .logo {
   font-size: 1.3rem;
   width: 21px;
   height: 20px;
-  display: flex;
   margin-right: 20px;
 }
 .page__heading .heart .fa-heart {
@@ -410,6 +530,11 @@ footer .logo {
   gap: 0.75rem;
   margin-bottom: 2.5rem;
 }
+@media (min-width: 768px) {
+  .order-list {
+    width: 74%;
+  }
+}
 .order-list__heading {
   position: relative;
   text-transform: uppercase;
@@ -433,6 +558,16 @@ footer .logo {
   height: 4.5rem;
   align-items: center;
   width: 100%;
+}
+.order-card__checkout {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  transform: translateX(-100px);
+  position: relative;
+  width: 30%;
+  height: 100px;
+  background-color: #F6F6F6;
 }
 .order-card__info {
   display: flex;
@@ -467,7 +602,6 @@ footer .logo {
 .order-card__price {
   display: flex;
   align-items: flex-end;
-  width: 15%;
   padding: 5px;
 }
 .order-card__price p {
