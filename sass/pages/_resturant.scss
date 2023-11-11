@@ -39,13 +39,20 @@
     background-color: $background;
 
     &__order-container {
+        width: 100%;
+
         @media (min-width: 768px) {
             display: flex;
             align-items: center;
             flex-direction: column;
         }
 
-        width: 100%;
+        i {
+            text-decoration: none;
+            color: var(--white);
+        }
+
+
     }
 
     &__heading {
@@ -60,44 +67,14 @@
         width: 100%;
         justify-content: space-between;
 
-        .heart input[type=checkbox] {
-            display: none;
-
-        }
-
         .heart {
-            font-size: 1.3rem;
-            width: 21px;
-            height: 20px;
-            margin-right: 20px;
-
-            .fa-heart {
-                color: $heart-like;
-            }
-
-            input[type="checkbox"] {
-                display: none;
-            }
-
-            input[type="checkbox"]:not(:checked)~.fas.fa-heart {
-                display: none;
-            }
-
-            input[type="checkbox"]:checked~.far.fa-heart {
-                display: none;
-            }
-
-            input[type="checkbox"]:checked~.fas.fa-heart {
-                display: block;
-            }
+            @include heart-icon-style;
         }
 
     }
 
 
-    i {
-        text-decoration: none;
-    }
+
 }
 
 .order-list {
@@ -139,36 +116,23 @@
     align-items: center;
     width: 100%;
 
-    &__checkout {
-        display: none;
-        justify-content: flex-end;
-        align-items: center;
-        transform: translateX(-100px);
-        position: relative;
-        width: 30%;
-        height: 100px;
-        background-color: $background;
-
-    }
 
     &__info {
+        position: relative;
         display: flex;
-        flex: 1;
-        justify-content: space-between;
         width: 100%;
-        margin: 2%;
-        gap: 2%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin: 0% 0% 0% 2%;
+        height: inherit;
+        align-items: center;
     }
+
 
     &__description {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         width: 100%;
-        padding: 5px;
+        padding: 0px 0px 0px 5px;
 
         & h4 {
             margin: 0;
@@ -186,23 +150,100 @@
     }
 
     &__price {
+        position: relative;
         display: flex;
-        align-items: flex-end;
-        padding: 5px;
 
         & p {
             margin: 0;
         }
     }
 
-    &__checkout {
+    /* &__checkout:hover {
+        animation: checkout 0.1s forwards;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: auto;
-        width: 20%;
-        margin-right: -20%;
+        height: -webkit-fill-available;
+        width: 24%;
+        margin-right: -1.8%;
+        margin-left: 20px;
         border-radius: 0px 15px 15px 0px;
-        background-color: $background;
+        background-color: $tertiary;
+        color: var(--white);
+    }
+
+    @keyframes checkout {
+        0% {}
+
+        100% {
+            translate: -10%;
+        }
+    } */
+
+
+}
+
+
+.order-card:hover .order-card__checkout {
+    animation: checkout 0.4s forwards ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -webkit-fill-available;
+    width: 13%;
+    margin-right: -1.8%;
+    margin-left: 20px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: $tertiary;
+    color: var(--white);
+
+}
+
+@keyframes checkout {
+    0% {}
+
+    100% {
+        translate: -10%;
+
     }
 }
+
+/* .order-card .order-card__checkout {
+    animation: checkout-out 1.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: -webkit-fill-available;
+    width: 24%;
+    margin-right: -1.8%;
+    margin-left: 20px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: $tertiary;
+    color: var(--white);
+}
+
+@keyframes checkout-out {
+    0% {}
+
+    30% {
+        translate: 100px;
+    }
+
+    100% {
+        translate: unset;
+    }
+
+}
+ */
+
+/* .order-card .order-card__checkout {
+    animation: checkout-out 1.5s forwards;
+}
+
+@keyframes checkout-out {
+    0% {
+        translate: -10%;
+    }
+
+    100% {}
+} */

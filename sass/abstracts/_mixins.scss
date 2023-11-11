@@ -30,22 +30,55 @@
   border: none;
   padding: 1rem 2rem;
   margin: 2rem 0;
-  box-shadow: 0rem 0.2rem 0.5rem 0.1rem $btn-box;
-  background: linear-gradient(-10deg, $primary 25%, $secondary 100%);
+  box-shadow: 0rem 0.1rem 0.1rem 0.1rem $btn-box;
+  background: linear-gradient(-11deg, $primary 26%, $secondary 100%);
   text-align: center;
 
   &:hover {
-    transform: scale(1.05);
     transition: all 80ms ease-in;
-    filter: brightness(1.05);
-    box-shadow: $btn-box 0.5rem 0.5rem 0.5rem 0.1rem;
+    filter: brightness(1.07);
+    box-shadow: $btn-box 0.3rem 0.3rem 0.3rem 0.3rem;
   }
 }
 
-/* @mixin heart-styles {
+@mixin heart-icon-style {
   font-size: 1.3rem;
-  width: 1.375rem;
-  height: 1.3125rem;
-  display: flex;
-  margin-right: 2.06rem;
-} */
+  width: 21px;
+  height: 20px;
+  margin-right: 20px;
+
+  .fa-heart {
+    position: absolute;
+    opacity: 1;
+    background: $heart-like;
+    background: $heart-background;
+    cursor: pointer;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .fas {
+    color: transparent;
+  }
+
+  input[type=checkbox] {
+    display: none;
+
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:not(:checked)~.fas.fa-heart {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked~.far.fa-heart {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked~.fas.fa-heart {
+    display: block;
+  }
+}

@@ -15,6 +15,7 @@ header {
     flex-shrink: 0;
     background-color: var(--white);
     box-shadow: 0px 2px 4px 0px var(--header-shadow);
+    padding: 0rem 1.06rem 0rem 1.06rem;
 
     &__logo {
         display: flex;
@@ -28,7 +29,6 @@ header {
     &__homearrow {
         display: flex;
         color: $footer-background;
-        margin-left: 1.06rem;
-        position: absolute;
+        //padding-left: 1.06rem;
     }
 }

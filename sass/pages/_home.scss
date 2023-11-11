@@ -60,10 +60,12 @@
 
     .explore__btn button {
         @media (min-width: 768px) {
-            margin: 0rem 0rem 1.5rem 0rem;
+            margin: 0rem 0rem 0.3rem 0rem;
+            margin-bottom: 1.2rem;
         }
 
         @include button-style;
+
     }
 }
 
@@ -219,33 +221,11 @@
                     }
                 }
 
+
                 .heart {
-                    font-size: 1.3rem;
-                    width: 21px;
-                    height: 20px;
-                    display: flex;
-                    margin-right: 20px;
-
-                    .fa-heart {
-                        color: var(--heart-like);
-                    }
-
-                    input[type="checkbox"] {
-                        display: none;
-                    }
-
-                    input[type="checkbox"]:not(:checked)~.fas.fa-heart {
-                        display: none;
-                    }
-
-                    input[type="checkbox"]:checked~.far.fa-heart {
-                        display: none;
-                    }
-
-                    input[type="checkbox"]:checked~.fas.fa-heart {
-                        display: block;
-                    }
+                    @include heart-icon-style;
                 }
+
             }
         }
     }
