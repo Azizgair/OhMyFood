@@ -400,7 +400,8 @@ footer .logo a {
 }
 .restaurants .restaurant__cards .restaurant__card img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 14.4375rem;
   position: relative;
 }
@@ -467,7 +468,8 @@ footer .logo a {
   position: relative;
   width: 100%;
   max-height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .page {
@@ -645,6 +647,4 @@ footer .logo a {
   border-radius: 0px 15px 15px 0px;
   background-color: #99E2D0;
   color: var(--white);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
