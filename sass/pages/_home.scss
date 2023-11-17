@@ -21,7 +21,6 @@
     }
 }
 
-
 .reserve {
     display: flex;
     justify-content: center;
@@ -65,7 +64,6 @@
         }
 
         @include button-style;
-
     }
 }
 
@@ -97,8 +95,6 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-
-
 
     &__btn {
         display: flex;
@@ -218,11 +214,9 @@
                     }
                 }
 
-
                 .heart {
                     @include heart-icon-style;
                 }
-
             }
         }
     }
