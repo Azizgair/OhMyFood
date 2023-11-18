@@ -1,7 +1,7 @@
 # OhMyFood
 ## Repository du Site Web Ohmyfood
 
-Bienvenue dans le dépôt du site web Ohmyfood ! Ce dépôt contient le code source du site web [Ohmyfood](https://azizgair.github.io/abdelaziz/)., une plateforme permettant aux utilisateurs de découvrir des restaurants exceptionnels et de réserver leurs menus préférés.
+Bienvenue dans le dépôt du site web Ohmyfood ! Ce dépôt contient le code source du site web [Ohmyfood](https://azizgair.github.io/abdelaziz/), une plateforme permettant aux utilisateurs de découvrir des restaurants exceptionnels et de réserver leurs menus préférés.
 
 ## Table des matières
 

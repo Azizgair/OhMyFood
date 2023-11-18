@@ -150,7 +150,6 @@
 .order-card__checkout {
     transition: all 400ms ease-in-out;
     width: 0px;
-    height: -webkit-fill-available;
     height: 100%;
     display: flex;
     align-items: center;
@@ -164,7 +163,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: -webkit-fill-available;
     height: 100%;
     width: 70px;
     margin-right: -1.8%;
