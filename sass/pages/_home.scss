@@ -1,5 +1,21 @@
 @use "../abstracts" as *;
 
+.main,
+.location {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .location {
     background-color: var(--location-background);
     display: flex;

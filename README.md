@@ -43,8 +43,9 @@ Pour construire le CSS prêt pour la production avec Sass :
 
 ### Exécuter Sass
 
-Si vous devez exécuter manuellement Sass, utilisez la commande suivante :
+Si vous devez exécuter manuellement Sass, utilisez l'un des commandes suivantes :
     `sass sass/style.scss css/style.css`
+    `sass sass/style.scss:css/style.css --watch --style compressed`
 Cette commande compilera et minimisera les fichiers Sass, générant le fichier style.css optimisé.
 
 ## Contributions
