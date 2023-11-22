@@ -37,6 +37,32 @@
     background-color: $background;
 
     &__order-container {
+
+        .fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Entrées */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Plats avec un décalage de 0.5s */
+        .fade-in--1delay {
+            animation: fadeIn 1s ease-in-out 0.5s;
+        }
+
+        /* Desserts avec un décalage de 1s */
+        .fade-in--2delay {
+            animation: fadeIn 1s ease-in-out 1s;
+        }
+
         width: 100%;
 
         @media (min-width: 768px) {
